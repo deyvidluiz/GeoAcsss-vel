@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="Vista aérea da Floresta Amazônica.">
+<rect width="1200" height="760" fill="#edf8f0"/>
+<rect x="70" y="70" width="1060" height="620" rx="8" fill="#ffffff" stroke="#198754" stroke-width="12"/>
+<path d="M135 540 C270 430 370 470 500 345 S765 225 1045 330" fill="none" stroke="#198754" stroke-width="24" stroke-linecap="round"/>
+<circle cx="300" cy="265" r="92" fill="#e9f3ff" stroke="#2f6f9f" stroke-width="10"/>
+<rect x="500" y="205" width="420" height="110" rx="8" fill="#fff7df" stroke="#9a6a00" stroke-width="8"/>
+<text x="120" y="150" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#202428">Vegetacao Amazonia</text>
+<text x="120" y="215" font-family="Arial, sans-serif" font-size="30" fill="#202428">Recurso visual didático local</text>
+<text x="530" y="275" font-family="Arial, sans-serif" font-size="32" fill="#202428">observe o conceito</text>
+<text x="120" y="640" font-family="Arial, sans-serif" font-size="26" fill="#202428">Vista aérea da Floresta Amazônica.</text>
+</svg>

@@ -1,0 +1,19 @@
+{% extends 'geo/base.html' %}
+
+{% block title %}Progresso - GeoAcessível{% endblock %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'geo:inicio' %}">Início</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Progresso</li>
+    </ol>
+</nav>
+{% endblock %}
+
+{% block content %}
+<h1>Meu progresso</h1>
+<p class="lead">O progresso fica salvo apenas neste navegador, usando localStorage. Não há login nem cadastro.</p>
+<div id="areaProgresso"></div>
+{{ temas_json|json_script:"temas-data" }}
+{% endblock %}

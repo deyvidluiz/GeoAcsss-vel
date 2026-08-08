@@ -1,0 +1,32 @@
+{% extends 'geo/base.html' %}
+
+{% block title %}{{ ano.titulo }} - GeoAcessível{% endblock %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'geo:inicio' %}">Início</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ ano.titulo }}</li>
+    </ol>
+</nav>
+{% endblock %}
+
+{% block content %}
+<h1>{{ ano.titulo }}</h1>
+<p class="lead">{{ ano.descricao }}</p>
+
+<div class="row g-3">
+    {% for tema in temas %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <article class="card h-100 tema-card">
+                <div class="card-body">
+                    <h2 class="h5">{{ tema.titulo }}</h2>
+                    <p>{{ tema.descricao }}</p>
+                    <p class="small text-muted">{{ tema.aulas|length }} aulas, quiz e atividade.</p>
+                    <a class="btn btn-success" href="{% url 'geo:tema' tema.slug %}">Abrir tema</a>
+                </div>
+            </article>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

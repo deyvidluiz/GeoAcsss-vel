@@ -1,0 +1,42 @@
+{% extends 'geo/base.html' %}
+{% load static %}
+
+{% block title %}Início - GeoAcessível{% endblock %}
+
+{% block content %}
+<section class="row align-items-center g-4 mb-4">
+    <div class="col-12 col-lg-7">
+        <span class="badge text-bg-success mb-2">Ensino Médio</span>
+        <h1 class="display-5 fw-bold">GeoAcessível</h1>
+        <p class="lead">Aulas curtas, organizadas e acessíveis para estudar Geografia com calma.</p>
+        <div id="continuarArea"></div>
+        <div class="alert alert-info mt-3 mb-0">
+            <strong>Curiosidade:</strong> {{ curiosidade }}
+        </div>
+    </div>
+    <div class="col-12 col-lg-5 text-center">
+        <img src="{% static 'geo/imagens/clima/mapa_climas_brasil.png' %}" class="img-fluid imagem-principal" alt="Mapa climático do Brasil segundo a classificação Köppen-Geiger">
+        <small class="text-muted d-block mt-2">Fonte: Wikimedia Commons; mapa Köppen-Geiger do Brasil.</small>
+    </div>
+</section>
+
+<section aria-labelledby="anos-titulo">
+    <h2 id="anos-titulo" class="h3 mb-3">Escolha o ano</h2>
+    <div class="row g-3">
+        {% for item in anos %}
+            <div class="col-12 col-md-4">
+                <article class="card h-100">
+                    <div class="card-body">
+                        <h3 class="h5">{{ item.titulo }}</h3>
+                        <p>{{ item.descricao }}</p>
+                        <p class="small text-muted">{{ item.temas|length }} temas disponíveis.</p>
+                        <a class="btn btn-success" href="{% url 'geo:ano' item.numero %}">Ver conteúdos</a>
+                    </div>
+                </article>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+{{ temas_json|json_script:"temas-data" }}
+{% endblock %}

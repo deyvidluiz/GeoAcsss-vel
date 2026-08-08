@@ -1,0 +1,26 @@
+{% extends 'geo/base.html' %}
+
+{% block title %}Quiz - {{ tema.titulo }}{% endblock %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'geo:inicio' %}">Início</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'geo:ano' tema.ano %}">{{ ano.titulo }}</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'geo:tema' tema.slug %}">{{ tema.titulo }}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Quiz</li>
+    </ol>
+</nav>
+{% endblock %}
+
+{% block content %}
+<h1>Quiz: {{ tema.titulo }}</h1>
+<p class="lead">Responda uma pergunta por vez. A explicação aparece após cada resposta.</p>
+<div id="areaQuiz" data-tema="{{ tema.slug }}" data-tema-titulo="{{ tema.titulo }}" data-tema-url="{% url 'geo:tema' tema.slug %}" data-progresso-url="{% url 'geo:progresso' %}"></div>
+{{ perguntas_json|json_script:"perguntas-data" }}
+{% endblock %}
+
+{% block scripts %}
+{% load static %}
+<script src="{% static 'geo/js/quiz.js' %}"></script>
+{% endblock %}

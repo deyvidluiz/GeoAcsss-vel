@@ -1,0 +1,192 @@
+{% extends 'geo/base.html' %}
+{% load static %}
+
+{% block title %}{{ aula.titulo }} - GeoAcessível{% endblock %}
+
+{% block breadcrumbs %}
+<div class="aula-topo">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="{% url 'geo:inicio' %}">Início</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'geo:ano' tema.ano %}">{{ ano.titulo }}</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'geo:tema' tema.slug %}">{{ tema.titulo }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ aula.titulo }}</li>
+        </ol>
+    </nav>
+    <a class="btn btn-sm btn-outline-secondary" href="{% url 'geo:tema' tema.slug %}">← Voltar para {{ tema.titulo }}</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="barra-leitura" aria-hidden="true"><span id="barraLeitura"></span></div>
+
+<article class="aula aula-rolagem" data-tema="{{ tema.slug }}" data-aula="{{ aula.numero }}">
+    <section class="hero-aula aparecer">
+        <div class="row align-items-center g-4">
+            <div class="col-12 col-lg-6">
+                <span class="badge text-bg-success mb-2">{{ tema.titulo }} · Aula {{ aula.numero }} de {{ tema.aulas|length }}</span>
+                <h1>{{ aula.titulo }}</h1>
+                <p class="hero-pergunta">{{ aula.pergunta_abertura }}</p>
+                <p>{{ aula.introducao.0 }}</p>
+                <p class="rolar-indicador">Role para continuar ↓</p>
+            </div>
+            <div class="col-12 col-lg-6">
+                <img class="img-fluid imagem-aula imagem-hero" src="{% if aula.imagem_externa %}{{ aula.imagem }}{% else %}{% static aula.imagem %}{% endif %}" alt="{{ aula.imagem_alt }}">
+                <p class="observacao-imagem">{{ aula.imagem_observacao }}</p>
+                <small class="text-muted fonte-imagem">Fonte: {{ aula.imagem_fonte }}</small>
+                {% if aula.imagem_zoom %}
+                    <button class="btn btn-sm btn-outline-secondary mt-2 zoom-imagem" type="button" data-bs-toggle="modal" data-bs-target="#modalImagem" data-src="{% if aula.imagem_externa %}{{ aula.imagem }}{% else %}{% static aula.imagem %}{% endif %}" data-alt="{{ aula.imagem_alt }}" data-fonte="{{ aula.imagem_fonte }}">Ver maior</button>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <section class="secao-aula aparecer" aria-labelledby="objetivo-aula">
+        <div class="limite-leitura">
+            <h2 id="objetivo-aula">Antes de continuar</h2>
+            <p class="lead">{{ aula.introducao.1 }}</p>
+            <div class="destaque observe">
+                <strong>Objetivo:</strong> {{ aula.objetivo }}
+            </div>
+        </div>
+    </section>
+
+    {% for secao in aula.secoes %}
+        <section class="secao-aula aparecer">
+            <div class="row align-items-center g-4 {% if secao.layout == 'invertida' %}flex-md-row-reverse{% endif %}">
+                <div class="col-12 col-md-6">
+                    <h2>{{ secao.titulo }}</h2>
+                    {% for texto in secao.textos %}
+                        <p>{{ texto }}</p>
+                    {% endfor %}
+                </div>
+                <div class="col-12 col-md-6">
+                    <img class="img-fluid imagem-aula" src="{% if secao.imagem_externa %}{{ secao.imagem }}{% else %}{% static secao.imagem %}{% endif %}" alt="{{ secao.imagem_alt }}">
+                    <p class="observacao-imagem">{{ secao.imagem_observacao }}</p>
+                    <small class="text-muted fonte-imagem">Fonte: {{ secao.imagem_fonte }}</small>
+                    {% if secao.imagem_zoom %}
+                        <button class="btn btn-sm btn-outline-secondary mt-2 zoom-imagem" type="button" data-bs-toggle="modal" data-bs-target="#modalImagem" data-src="{% if secao.imagem_externa %}{{ secao.imagem }}{% else %}{% static secao.imagem %}{% endif %}" data-alt="{{ secao.imagem_alt }}" data-fonte="{{ secao.imagem_fonte }}">Ver maior</button>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
+        {% if forloop.counter == 1 %}
+            <section class="secao-aula aparecer">
+                <h2>{{ aula.comparacao.titulo }}</h2>
+                <div class="comparacao-visual">
+                    {% for item in aula.comparacao.itens %}
+                        <div class="comparacao-item">
+                            <span class="comparacao-icone" aria-hidden="true">{{ item.icone }}</span>
+                            <h3>{{ item.titulo }}</h3>
+                            <ul>
+                                {% for ponto in item.pontos %}
+                                    <li>{{ ponto }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+        {% endif %}
+
+        {% if forloop.counter == 2 %}
+            <section class="pergunta-rapida aparecer" data-resposta="">
+                <h2>Pergunta rápida</h2>
+                <p>{{ aula.pergunta_rapida.texto }}</p>
+                <div class="d-flex flex-wrap gap-2">
+                    {% for opcao in aula.pergunta_rapida.opcoes %}
+                        <button class="btn btn-outline-success pergunta-btn" type="button" data-correta="{{ opcao.correta|yesno:'true,false' }}">{{ opcao.texto }}</button>
+                    {% endfor %}
+                </div>
+                <div class="pergunta-feedback mt-3" role="status" data-explicacao="{{ aula.pergunta_rapida.explicacao }}"></div>
+            </section>
+        {% endif %}
+    {% endfor %}
+
+    {% if aula.imagem_interativa %}
+        <section class="secao-aula aparecer">
+            <h2>{{ aula.imagem_interativa.titulo }}</h2>
+            <div class="imagem-interativa">
+                <img class="img-fluid imagem-aula" src="{% if aula.imagem_interativa.externa %}{{ aula.imagem_interativa.arquivo }}{% else %}{% static aula.imagem_interativa.arquivo %}{% endif %}" alt="{{ aula.imagem_interativa.alt }}">
+                {% for ponto in aula.imagem_interativa.pontos %}
+                    <button class="marcador-imagem" type="button" style="top: {{ ponto.top }}; left: {{ ponto.left }};" data-texto="{{ ponto.texto }}" aria-label="Mostrar explicação do ponto {{ ponto.numero }}">{{ ponto.numero }}</button>
+                {% endfor %}
+            </div>
+            <p class="observacao-imagem">{{ aula.imagem_interativa.observacao }}</p>
+            <small class="text-muted fonte-imagem">Fonte: {{ aula.imagem_interativa.fonte }}</small>
+            {% if aula.imagem_interativa.zoom %}
+                <button class="btn btn-sm btn-outline-secondary mt-2 zoom-imagem" type="button" data-bs-toggle="modal" data-bs-target="#modalImagem" data-src="{% if aula.imagem_interativa.externa %}{{ aula.imagem_interativa.arquivo }}{% else %}{% static aula.imagem_interativa.arquivo %}{% endif %}" data-alt="{{ aula.imagem_interativa.alt }}" data-fonte="{{ aula.imagem_interativa.fonte }}">Ver maior</button>
+            {% endif %}
+            <p id="marcadorFeedback" class="marcador-feedback" role="status">Clique em um número para ver a explicação.</p>
+        </section>
+    {% endif %}
+
+    {% for destaque in aula.destaques %}
+        <section class="destaque-aula aparecer">
+            <span>{{ destaque.tipo }}</span>
+            <p>{{ destaque.texto }}</p>
+        </section>
+    {% endfor %}
+
+    <section class="secao-aula aparecer">
+        <div class="row align-items-center g-4">
+            <div class="col-12 col-md-6">
+                <h2>{{ aula.revelar.titulo }}</h2>
+                <p>Leia a explicação curta quando quiser reforçar a ideia antes da revisão.</p>
+                <button class="btn btn-outline-success revelar-btn" type="button" aria-expanded="false">{{ aula.revelar.botao }}</button>
+                <div class="revelar-conteudo mt-3" hidden>
+                    <p>{{ aula.revelar.texto }}</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="curiosidade">
+                    <h2>Você sabia?</h2>
+                    <p>{{ aula.curiosidade }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resumo-aula aparecer">
+        <h2>O que vimos nesta aula?</h2>
+        <ul>
+            {% for item in aula.resumo %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="secao-aula atividade-final aparecer">
+        <h2>Teste o que aprendeu</h2>
+        <p>{{ aula.atividade }}</p>
+        <div class="d-flex flex-wrap gap-2 align-items-center">
+            {% if anterior %}
+                <a class="btn btn-outline-secondary" href="{% url 'geo:aula' tema.slug anterior %}">← Aula anterior</a>
+            {% endif %}
+            <button class="btn btn-outline-success" type="button" id="marcarAula">Marcar como concluída</button>
+            {% if proxima %}
+                <a class="btn btn-success" href="{% url 'geo:aula' tema.slug proxima %}">Próxima aula →</a>
+            {% else %}
+                <a class="btn btn-success" href="{% url 'geo:quiz' tema.slug %}">Ir para o quiz →</a>
+            {% endif %}
+            <span id="statusAula" class="status-aula" role="status"></span>
+        </div>
+    </section>
+</article>
+
+<div class="modal fade" id="modalImagem" tabindex="-1" aria-labelledby="modalImagemTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title h5" id="modalImagemTitulo">Imagem em tamanho maior</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImagemArquivo" class="img-fluid w-100" src="" alt="">
+                <small id="modalImagemFonte" class="text-muted d-block mt-2"></small>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

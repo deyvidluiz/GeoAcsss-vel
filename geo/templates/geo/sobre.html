@@ -1,0 +1,41 @@
+{% extends 'geo/base.html' %}
+
+{% block title %}Sobre - GeoAcessível{% endblock %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'geo:inicio' %}">Início</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Sobre</li>
+    </ol>
+</nav>
+{% endblock %}
+
+{% block content %}
+<h1>Sobre o GeoAcessível</h1>
+<div class="row g-3">
+    <section class="col-12 col-lg-7">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="h4">Objetivo</h2>
+                <p>O GeoAcessível é um site educacional de Geografia para estudantes do Ensino Médio. O conteúdo foi organizado em blocos curtos, com exemplos, resumo e atividades para apoiar o estudo gradual.</p>
+                <p>A proposta considera estudantes com TEA ao priorizar previsibilidade, navegação clara, foco visível, pouco movimento e controles de fonte, contraste e redução de estímulos.</p>
+            </div>
+        </div>
+    </section>
+    <section class="col-12 col-lg-5">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="h4">Tecnologias</h2>
+                <ul>
+                    <li>Python e Django</li>
+                    <li>HTML, CSS e JavaScript puro</li>
+                    <li>Bootstrap via CDN</li>
+                    <li>SQLite padrão do Django</li>
+                    <li>localStorage para progresso e preferências</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
