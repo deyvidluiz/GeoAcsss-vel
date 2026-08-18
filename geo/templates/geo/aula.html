@@ -30,26 +30,38 @@
                 <p>{{ aula.introducao.0 }}</p>
                 <p class="rolar-indicador">Role para continuar ↓</p>
             </div>
-            <div class="col-12 col-lg-6">
-                <img class="img-fluid imagem-aula imagem-hero" src="{% if aula.imagem_externa %}{{ aula.imagem }}{% else %}{% static aula.imagem %}{% endif %}" alt="{{ aula.imagem_alt }}">
-                <p class="observacao-imagem">{{ aula.imagem_observacao }}</p>
-                <small class="text-muted fonte-imagem">Fonte: {{ aula.imagem_fonte }}</small>
-                {% if aula.imagem_zoom %}
-                    <button class="btn btn-sm btn-outline-secondary mt-2 zoom-imagem" type="button" data-bs-toggle="modal" data-bs-target="#modalImagem" data-src="{% if aula.imagem_externa %}{{ aula.imagem }}{% else %}{% static aula.imagem %}{% endif %}" data-alt="{{ aula.imagem_alt }}" data-fonte="{{ aula.imagem_fonte }}">Ver maior</button>
-                {% endif %}
-            </div>
+            {% if aula.imagem %}
+                <div class="col-12 col-lg-6">
+                    <img class="img-fluid imagem-aula imagem-hero" src="{% if aula.imagem_externa %}{{ aula.imagem }}{% else %}{% static aula.imagem %}{% endif %}" alt="{{ aula.imagem_alt }}">
+                    {% if aula.imagem_observacao %}
+                        <p class="observacao-imagem">{{ aula.imagem_observacao }}</p>
+                    {% endif %}
+                    {% if aula.imagem_fonte %}
+                        <small class="text-muted fonte-imagem">Fonte: {{ aula.imagem_fonte }}</small>
+                    {% endif %}
+                    {% if aula.imagem_zoom %}
+                        <button class="btn btn-sm btn-outline-secondary mt-2 zoom-imagem" type="button" data-bs-toggle="modal" data-bs-target="#modalImagem" data-src="{% if aula.imagem_externa %}{{ aula.imagem }}{% else %}{% static aula.imagem %}{% endif %}" data-alt="{{ aula.imagem_alt }}" data-fonte="{{ aula.imagem_fonte }}">Ver maior</button>
+                    {% endif %}
+                </div>
+            {% endif %}
         </div>
     </section>
 
-    <section class="secao-aula aparecer" aria-labelledby="objetivo-aula">
-        <div class="limite-leitura">
-            <h2 id="objetivo-aula">Antes de continuar</h2>
-            <p class="lead">{{ aula.introducao.1 }}</p>
-            <div class="destaque observe">
-                <strong>Objetivo:</strong> {{ aula.objetivo }}
+    {% if aula.introducao.1 or aula.objetivo %}
+        <section class="secao-aula aparecer" aria-labelledby="objetivo-aula">
+            <div class="limite-leitura">
+                {% if aula.introducao.1 %}
+                    <h2 id="objetivo-aula">Antes de continuar</h2>
+                    <p class="lead">{{ aula.introducao.1 }}</p>
+                {% endif %}
+                {% if aula.objetivo %}
+                    <div class="destaque observe">
+                        <strong>Objetivo:</strong> {{ aula.objetivo }}
+                    </div>
+                {% endif %}
             </div>
-        </div>
-    </section>
+        </section>
+    {% endif %}
 
     {% for secao in aula.secoes %}
         <section class="secao-aula aparecer">
@@ -60,18 +72,24 @@
                         <p>{{ texto }}</p>
                     {% endfor %}
                 </div>
-                <div class="col-12 col-md-6">
-                    <img class="img-fluid imagem-aula" src="{% if secao.imagem_externa %}{{ secao.imagem }}{% else %}{% static secao.imagem %}{% endif %}" alt="{{ secao.imagem_alt }}">
-                    <p class="observacao-imagem">{{ secao.imagem_observacao }}</p>
-                    <small class="text-muted fonte-imagem">Fonte: {{ secao.imagem_fonte }}</small>
-                    {% if secao.imagem_zoom %}
-                        <button class="btn btn-sm btn-outline-secondary mt-2 zoom-imagem" type="button" data-bs-toggle="modal" data-bs-target="#modalImagem" data-src="{% if secao.imagem_externa %}{{ secao.imagem }}{% else %}{% static secao.imagem %}{% endif %}" data-alt="{{ secao.imagem_alt }}" data-fonte="{{ secao.imagem_fonte }}">Ver maior</button>
-                    {% endif %}
-                </div>
+                {% if secao.imagem %}
+                    <div class="col-12 col-md-6">
+                        <img class="img-fluid imagem-aula" src="{% if secao.imagem_externa %}{{ secao.imagem }}{% else %}{% static secao.imagem %}{% endif %}" alt="{{ secao.imagem_alt }}">
+                        {% if secao.imagem_observacao %}
+                            <p class="observacao-imagem">{{ secao.imagem_observacao }}</p>
+                        {% endif %}
+                        {% if secao.imagem_fonte %}
+                            <small class="text-muted fonte-imagem">Fonte: {{ secao.imagem_fonte }}</small>
+                        {% endif %}
+                        {% if secao.imagem_zoom %}
+                            <button class="btn btn-sm btn-outline-secondary mt-2 zoom-imagem" type="button" data-bs-toggle="modal" data-bs-target="#modalImagem" data-src="{% if secao.imagem_externa %}{{ secao.imagem }}{% else %}{% static secao.imagem %}{% endif %}" data-alt="{{ secao.imagem_alt }}" data-fonte="{{ secao.imagem_fonte }}">Ver maior</button>
+                        {% endif %}
+                    </div>
+                {% endif %}
             </div>
         </section>
 
-        {% if forloop.counter == 1 %}
+        {% if forloop.counter == 1 and aula.comparacao %}
             <section class="secao-aula aparecer">
                 <h2>{{ aula.comparacao.titulo }}</h2>
                 <div class="comparacao-visual">
@@ -90,7 +108,7 @@
             </section>
         {% endif %}
 
-        {% if forloop.counter == 2 %}
+        {% if forloop.counter == 2 and aula.pergunta_rapida %}
             <section class="pergunta-rapida aparecer" data-resposta="">
                 <h2>Pergunta rápida</h2>
                 <p>{{ aula.pergunta_rapida.texto }}</p>
@@ -113,8 +131,12 @@
                     <button class="marcador-imagem" type="button" style="top: {{ ponto.top }}; left: {{ ponto.left }};" data-texto="{{ ponto.texto }}" aria-label="Mostrar explicação do ponto {{ ponto.numero }}">{{ ponto.numero }}</button>
                 {% endfor %}
             </div>
-            <p class="observacao-imagem">{{ aula.imagem_interativa.observacao }}</p>
-            <small class="text-muted fonte-imagem">Fonte: {{ aula.imagem_interativa.fonte }}</small>
+            {% if aula.imagem_interativa.observacao %}
+                <p class="observacao-imagem">{{ aula.imagem_interativa.observacao }}</p>
+            {% endif %}
+            {% if aula.imagem_interativa.fonte %}
+                <small class="text-muted fonte-imagem">Fonte: {{ aula.imagem_interativa.fonte }}</small>
+            {% endif %}
             {% if aula.imagem_interativa.zoom %}
                 <button class="btn btn-sm btn-outline-secondary mt-2 zoom-imagem" type="button" data-bs-toggle="modal" data-bs-target="#modalImagem" data-src="{% if aula.imagem_interativa.externa %}{{ aula.imagem_interativa.arquivo }}{% else %}{% static aula.imagem_interativa.arquivo %}{% endif %}" data-alt="{{ aula.imagem_interativa.alt }}" data-fonte="{{ aula.imagem_interativa.fonte }}">Ver maior</button>
             {% endif %}
@@ -129,24 +151,30 @@
         </section>
     {% endfor %}
 
+    {% if aula.revelar or aula.curiosidade %}
     <section class="secao-aula aparecer">
         <div class="row align-items-center g-4">
-            <div class="col-12 col-md-6">
-                <h2>{{ aula.revelar.titulo }}</h2>
-                <p>Leia a explicação curta quando quiser reforçar a ideia antes da revisão.</p>
-                <button class="btn btn-outline-success revelar-btn" type="button" aria-expanded="false">{{ aula.revelar.botao }}</button>
-                <div class="revelar-conteudo mt-3" hidden>
-                    <p>{{ aula.revelar.texto }}</p>
+            {% if aula.revelar %}
+                <div class="col-12 col-md-6">
+                    <h2>{{ aula.revelar.titulo }}</h2>
+                    <p>Leia a explicação curta quando quiser reforçar a ideia antes da revisão.</p>
+                    <button class="btn btn-outline-success revelar-btn" type="button" aria-expanded="false">{{ aula.revelar.botao }}</button>
+                    <div class="revelar-conteudo mt-3" hidden>
+                        <p>{{ aula.revelar.texto }}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="curiosidade">
-                    <h2>Você sabia?</h2>
-                    <p>{{ aula.curiosidade }}</p>
+            {% endif %}
+            {% if aula.curiosidade %}
+                <div class="col-12 col-md-6">
+                    <div class="curiosidade">
+                        <h2>Você sabia?</h2>
+                        <p>{{ aula.curiosidade }}</p>
+                    </div>
                 </div>
-            </div>
+            {% endif %}
         </div>
     </section>
+    {% endif %}
 
     <section class="resumo-aula aparecer">
         <h2>O que vimos nesta aula?</h2>
@@ -158,8 +186,10 @@
     </section>
 
     <section class="secao-aula atividade-final aparecer">
-        <h2>Teste o que aprendeu</h2>
-        <p>{{ aula.atividade }}</p>
+        {% if aula.atividade %}
+            <h2>Teste o que aprendeu</h2>
+            <p>{{ aula.atividade }}</p>
+        {% endif %}
         <div class="d-flex flex-wrap gap-2 align-items-center">
             {% if anterior %}
                 <a class="btn btn-outline-secondary" href="{% url 'geo:aula' tema.slug anterior %}">← Aula anterior</a>

@@ -1,3 +1,4 @@
+import json
 from hashlib import sha256
 from pathlib import Path
 from urllib.parse import quote, unquote
@@ -58,14 +59,34 @@ def alternativas_com_correta(alternativas, correta, salt):
 def caminho_catalogo_local(chave, imagem):
     nome = unquote(imagem.get("source_url", imagem["arquivo"]).rsplit("/", 1)[-1])
     extensao = Path(nome).suffix.lower() or ".jpg"
-    return f"geo/imagens/catalogo/{chave}{extensao}"
+    base_estatico = Path(__file__).resolve().parent / "static"
+    for caminho in (f"geo/imagens/catalogo/{chave}{extensao}", f"geo/imagens/catalogo/{chave}.svg"):
+        arquivo_estatico = base_estatico / caminho
+        if not arquivo_estatico.exists():
+            continue
+        if arquivo_estatico.suffix == ".svg" and "Recurso visual didático local" in arquivo_estatico.read_text(
+            encoding="utf-8",
+            errors="ignore",
+        ):
+            continue
+        return caminho
+    return None
 
 
 def usar_catalogo_local():
     for chave, imagem in IMAGENS_REAIS.items():
         if imagem.get("externa") and imagem.get("source_url"):
-            imagem["arquivo"] = caminho_catalogo_local(chave, imagem)
-            imagem["externa"] = False
+            caminho_local = caminho_catalogo_local(chave, imagem)
+            if caminho_local:
+                imagem["arquivo"] = caminho_local
+                imagem["externa"] = False
+
+
+def carregar_fotos_substitutas():
+    manifesto = Path(__file__).resolve().parent / "fotos_substitutas.json"
+    if not manifesto.exists():
+        return {}
+    return json.loads(manifesto.read_text(encoding="utf-8"))
 
 TEMAS_BASE = {
     "relevo": {
@@ -754,6 +775,7 @@ IMAGENS_REAIS.update({
 })
 
 usar_catalogo_local()
+FOTOS_SUBSTITUTAS = carregar_fotos_substitutas()
 
 IMAGENS_TEMA = {
     "Clima": "clima_mapa",
@@ -936,38 +958,23 @@ def chaves_visuais_da_aula(tema, numero):
     return chaves
 
 
-def diagrama_didatico(tema, aula, secao, indice):
-    titulo = f"{tema}: {aula}"
-    subtitulo = secao
-    cor_fundo = ["#e9f3ff", "#edf8f0", "#fff7df", "#f4ecff"][indice % 4]
-    cor_linha = ["#2f6f9f", "#198754", "#9a6a00", "#6f42c1"][indice % 4]
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="{titulo} - {subtitulo}">
-<rect width="1200" height="760" fill="{cor_fundo}"/>
-<path d="M80 570 C250 450 360 500 500 390 S800 250 1120 330" fill="none" stroke="{cor_linha}" stroke-width="22" stroke-linecap="round"/>
-<circle cx="260" cy="260" r="82" fill="#ffffff" stroke="{cor_linha}" stroke-width="12"/>
-<rect x="490" y="180" width="420" height="118" rx="8" fill="#ffffff" stroke="{cor_linha}" stroke-width="10"/>
-<rect x="170" y="455" width="260" height="90" rx="8" fill="#ffffff" stroke="{cor_linha}" stroke-width="10"/>
-<rect x="670" y="475" width="300" height="90" rx="8" fill="#ffffff" stroke="{cor_linha}" stroke-width="10"/>
-<text x="80" y="95" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#202428">{titulo}</text>
-<text x="80" y="155" font-family="Arial, sans-serif" font-size="34" fill="#202428">{subtitulo}</text>
-<text x="515" y="253" font-family="Arial, sans-serif" font-size="34" fill="#202428">conceito</text>
-<text x="215" y="512" font-family="Arial, sans-serif" font-size="30" fill="#202428">lugar</text>
-<text x="705" y="532" font-family="Arial, sans-serif" font-size="30" fill="#202428">consequência</text>
-</svg>"""
-    return {
-        "arquivo": f"data:image/svg+xml;charset=UTF-8,{quote(svg)}",
-        "externa": True,
-        "alt": f"Diagrama didático sobre {aula}, seção {secao}.",
-        "fonte": "GeoAcessível; diagrama didático elaborado especificamente para esta aula.",
-        "observacao": f"Este diagrama organiza {secao.lower()} em três pistas: conceito, lugar e consequência. Use-o para relacionar a imagem ao texto da aula.",
-        "zoom": False,
-    }
+def limpar_imagem_artificial(campo):
+    campo["imagem"] = None
+    campo["imagem_externa"] = False
+    campo["imagem_alt"] = ""
+    campo["imagem_fonte"] = ""
+    campo["imagem_observacao"] = ""
+    campo["imagem_zoom"] = False
 
 
-def aplicar_diagrama_no_campo(campo, tema, aula, secao, indice):
-    imagem = diagrama_didatico(tema, aula, secao, indice)
+def aplicar_foto_substituta_no_campo(campo, indice):
+    chave = f"{indice + 1:03d}"
+    imagem = FOTOS_SUBSTITUTAS.get(chave)
+    if not imagem:
+        limpar_imagem_artificial(campo)
+        return
     campo["imagem"] = imagem["arquivo"]
-    campo["imagem_externa"] = imagem["externa"]
+    campo["imagem_externa"] = False
     campo["imagem_alt"] = imagem["alt"]
     campo["imagem_fonte"] = imagem["fonte"]
     campo["imagem_observacao"] = imagem["observacao"]
@@ -984,10 +991,11 @@ def deduplicar_imagens_aulas(temas):
             for campo, secao in campos:
                 caminho = campo["imagem"]
                 if caminho in vistos:
-                    aplicar_diagrama_no_campo(campo, tema["titulo"], aula["titulo"], secao, indice)
+                    aplicar_foto_substituta_no_campo(campo, indice)
                     indice += 1
                     caminho = campo["imagem"]
-                vistos.add(caminho)
+                if caminho:
+                    vistos.add(caminho)
             interativa = aula.get("imagem_interativa")
             if interativa:
                 caminho = interativa["arquivo"]
@@ -1162,6 +1170,49 @@ def montar_aula(tema, numero, titulo, objetivo, exemplo):
     }
 
 
+def reduzir_blocos_repetidos(temas):
+    for tema in temas.values():
+        for aula in tema["aulas"]:
+            primeira_aula = aula["numero"] == 1
+            revelar_especifico = bool(
+                aula.get("revelar")
+                and not aula["revelar"]["texto"].startswith("Uma boa resposta em Geografia")
+            )
+            if not primeira_aula:
+                if aula.get("revelar") and aula["revelar"]["texto"].startswith("Uma boa resposta em Geografia"):
+                    aula["revelar"] = None
+                if aula.get("comparacao") and aula["comparacao"]["titulo"] in {
+                    "Observe a diferença",
+                    "Compare as formas",
+                    "Populoso x Povoado",
+                }:
+                    aula["comparacao"] = None
+                if aula.get("atividade") == "Escolha uma imagem, mapa ou notícia relacionada à aula. Anote o lugar, o fenômeno observado e uma consequência para a sociedade ou para a natureza.":
+                    aula["atividade"] = None
+                aula["destaques"] = [
+                    destaque
+                    for destaque in aula.get("destaques", [])
+                    if destaque["tipo"] != "Observe"
+                ]
+                aula["resumo"] = [
+                    item for item in aula["resumo"]
+                    if item not in {
+                        "Mapas, imagens e dados ajudam a enxergar relações que o texto sozinho não mostra.",
+                        "Causas e consequências variam conforme a região, a escala e as ações humanas.",
+                    }
+                ]
+                if not revelar_especifico:
+                    aula["curiosidade"] = None
+            if not primeira_aula and tema["titulo"] in TEXTOS_TEMA and not revelar_especifico:
+                aula["introducao"] = texto_tema(
+                    "",
+                    aula["titulo"],
+                    aula["objetivo"],
+                    aula["resumo"][-1].replace("O exemplo de ", "").replace(" ajuda a transformar a explicação em uma situação concreta.", ""),
+                )
+    return temas
+
+
 def aula_elementos_clima():
     imagem_clima = imagem_real("clima_paisagem")
     return {
@@ -1271,7 +1322,7 @@ def construir_temas():
     return temas
 
 
-TEMAS = deduplicar_imagens_aulas(construir_temas())
+TEMAS = deduplicar_imagens_aulas(reduzir_blocos_repetidos(construir_temas()))
 
 PERGUNTAS_ESPECIFICAS = {
     "clima": [
@@ -1317,10 +1368,15 @@ def perguntas_genericas(slug, tema):
             "Estudar apenas nomes sem relação com o espaço.",
             "Substituir explicações por respostas decoradas.",
         ]
+        explicacao = (
+            aula["revelar"]["texto"]
+            if aula.get("revelar")
+            else aula["pergunta_rapida"]["explicacao"]
+        )
         perguntas.append({
             "pergunta": f"Qual ideia aparece na aula '{aula['titulo']}'?",
             "alternativas": alternativas_com_correta(alternativas, 0, f"{slug}|generica|{indice}|{aula['titulo']}"),
-            "explicacao": aula["revelar"]["texto"],
+            "explicacao": explicacao,
         })
     alternativas_estudo = [
         "Relacionar conceito, exemplo e localização.",

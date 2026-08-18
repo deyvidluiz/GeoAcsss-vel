@@ -1,0 +1,101 @@
+{
+  "001": {
+    "arquivo": "geo/imagens/aulas/foto_001_clima_1_tempo_e_clima_abertura.jpg",
+    "alt": "Fotografia real relacionada a tempo e clima, usada para contextualizar visão geral na aula de Clima.",
+    "fonte": "Wikimedia Commons; arquivo 2015-06-23 20 36 14 Thunderstorm clouds near sunset at the National Weather Service's Baltimore-Washington Weather Forecast Office in Sterling, Virginia.jpg, autor Famartin, CC BY-SA 4.0.",
+    "observacao": "Observe a fotografia e relacione os elementos reais da cena ao conteúdo: Tempo e clima.",
+    "zoom": true,
+    "aula": "Clima - Aula 1: Tempo e clima",
+    "secao": "abertura",
+    "source_url": "https://commons.wikimedia.org/wiki/File:2015-06-23_20_36_14_Thunderstorm_clouds_near_sunset_at_the_National_Weather_Service%27s_Baltimore-Washington_Weather_Forecast_Office_in_Sterling,_Virginia.jpg",
+    "commons_title": "2015-06-23 20 36 14 Thunderstorm clouds near sunset at the National Weather Service's Baltimore-Washington Weather Forecast Office in Sterling, Virginia.jpg"
+  },
+  "002": {
+    "arquivo": "geo/imagens/aulas/foto_002_clima_2_elementos_do_clima_abertura.jpg",
+    "alt": "Fotografia real relacionada a elementos do clima, usada para contextualizar visão geral na aula de Clima.",
+    "fonte": "Wikimedia Commons; arquivo Weather station instruments in City Botanic Gardens, Brisbane, Queensland, 2020.jpg, autor Kgbo, CC BY-SA 4.0.",
+    "observacao": "Observe a fotografia e relacione os elementos reais da cena ao conteúdo: Elementos do clima.",
+    "zoom": true,
+    "aula": "Clima - Aula 2: Elementos do clima",
+    "secao": "abertura",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Weather_station_instruments_in_City_Botanic_Gardens,_Brisbane,_Queensland,_2020.jpg",
+    "commons_title": "Weather station instruments in City Botanic Gardens, Brisbane, Queensland, 2020.jpg"
+  },
+  "003": {
+    "arquivo": "geo/imagens/aulas/foto_003_clima_2_elementos_do_clima_precipita_o.jpg",
+    "alt": "Fotografia real relacionada a elementos do clima, usada para contextualizar precipitação na aula de Clima.",
+    "fonte": "Wikimedia Commons; arquivo Wetterstation Mettingen Schlickelde Davis Weather Station Equipment.jpg, autor J.-H. Janßen, CC0.",
+    "observacao": "Observe a fotografia e relacione os elementos reais da cena ao conteúdo: Elementos do clima.",
+    "zoom": true,
+    "aula": "Clima - Aula 2: Elementos do clima",
+    "secao": "Precipitação",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Wetterstation_Mettingen_Schlickelde_Davis_Weather_Station_Equipment.jpg",
+    "commons_title": "Wetterstation Mettingen Schlickelde Davis Weather Station Equipment.jpg"
+  },
+  "006": {
+    "arquivo": "geo/imagens/aulas/foto_006_clima_4_massas_de_ar_no_brasil_abertura.jpg",
+    "alt": "Fotografia real relacionada a massas de ar no brasil, usada para contextualizar visão geral na aula de Clima.",
+    "fonte": "Wikimedia Commons; arquivo A Satellite View of a Back-door Cold Front (14295309881).jpg, autor NASA Goddard Space Flight Center from Greenbelt, MD, USA, Public domain.",
+    "observacao": "Observe a fotografia e relacione os elementos reais da cena ao conteúdo: Massas de ar no Brasil.",
+    "zoom": true,
+    "aula": "Clima - Aula 4: Massas de ar no Brasil",
+    "secao": "abertura",
+    "source_url": "https://commons.wikimedia.org/wiki/File:A_Satellite_View_of_a_Back-door_Cold_Front_(14295309881).jpg",
+    "commons_title": "A Satellite View of a Back-door Cold Front (14295309881).jpg"
+  },
+  "008": {
+    "arquivo": "geo/imagens/aulas/foto_008_clima_6_mudan_as_clim_ticas_abertura.jpg",
+    "alt": "Fotografia real relacionada a mudanças climáticas, usada para contextualizar visão geral na aula de Clima.",
+    "fonte": "Wikimedia Commons; arquivo Cyclone Flurry in the Southern Hemisphere (153995).jpg, autor NASA Earth Observatory image by Michala Garrison, using MODIS and VIIRS data from NASA EOSDIS LANCE and GIBS/Worldview and the Joint Polar Satellite System (JPSS). Story by Lindsey Doermann., Public domain.",
+    "observacao": "Observe a fotografia e relacione os elementos reais da cena ao conteúdo: Mudanças climáticas.",
+    "zoom": true,
+    "aula": "Clima - Aula 6: Mudanças climáticas",
+    "secao": "abertura",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cyclone_Flurry_in_the_Southern_Hemisphere_(153995).jpg",
+    "commons_title": "Cyclone Flurry in the Southern Hemisphere (153995).jpg"
+  },
+  "009": {
+    "arquivo": "geo/imagens/aulas/foto_009_clima_7_clima_e_cotidiano_por_que_isso_importa.jpg",
+    "alt": "Fotografia real relacionada a clima e cotidiano, usada para contextualizar impacto social na aula de Clima.",
+    "fonte": "Wikimedia Commons; arquivo The effects of the drought on vegetation in Morocco.jpg, autor European Union, Copernicus Sentinel-3  imagery, Attribution.",
+    "observacao": "Observe a fotografia e relacione os elementos reais da cena ao conteúdo: Clima e cotidiano.",
+    "zoom": true,
+    "aula": "Clima - Aula 7: Clima e cotidiano",
+    "secao": "Por que isso importa?",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_effects_of_the_drought_on_vegetation_in_Morocco.jpg",
+    "commons_title": "The effects of the drought on vegetation in Morocco.jpg"
+  },
+  "010": {
+    "arquivo": "geo/imagens/aulas/foto_010_vegeta_o_1_o_que_vegeta_o_comece_observando.jpg",
+    "alt": "Fotografia real relacionada a o que é vegetação, usada para contextualizar exemplo real na aula de Vegetação.",
+    "fonte": "Wikimedia Commons; arquivo O que é real e o que reflexo?.jpg, autor Sharlene Melanie, CC BY-SA 4.0.",
+    "observacao": "Observe a fotografia e relacione os elementos reais da cena ao conteúdo: O que é vegetação.",
+    "zoom": true,
+    "aula": "Vegetação - Aula 1: O que é vegetação",
+    "secao": "Comece observando",
+    "source_url": "https://commons.wikimedia.org/wiki/File:O_que_%C3%A9_real_e_o_que_reflexo%3F.jpg",
+    "commons_title": "O que é real e o que reflexo?.jpg"
+  },
+  "011": {
+    "arquivo": "geo/imagens/aulas/foto_011_vegeta_o_1_o_que_vegeta_o_por_que_isso_importa.jpg",
+    "alt": "Fotografia real relacionada a o que é vegetação, usada para contextualizar impacto social na aula de Vegetação.",
+    "fonte": "Wikimedia Commons; arquivo Estrutura em ferro e vegetação que cobre o que antes era um poço, nos jardins fotoPatriciaSantos.jpg, autor Sílvia Santos, CC BY-SA 4.0.",
+    "observacao": "Observe a fotografia e relacione os elementos reais da cena ao conteúdo: O que é vegetação.",
+    "zoom": true,
+    "aula": "Vegetação - Aula 1: O que é vegetação",
+    "secao": "Por que isso importa?",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Estrutura_em_ferro_e_vegeta%C3%A7%C3%A3o_que_cobre_o_que_antes_era_um_po%C3%A7o,_nos_jardins_fotoPatriciaSantos.jpg",
+    "commons_title": "Estrutura em ferro e vegetação que cobre o que antes era um poço, nos jardins fotoPatriciaSantos.jpg"
+  },
+  "012": {
+    "arquivo": "geo/imagens/aulas/foto_012_vegeta_o_2_biomas_brasileiros_comece_observando.jpg",
+    "alt": "Fotografia real relacionada a biomas brasileiros, usada para contextualizar exemplo real na aula de Vegetação.",
+    "fonte": "Wikimedia Commons; arquivo CAATINGA bioma brasileiro.jpg, autor Arturalveees, CC BY-SA 4.0.",
+    "observacao": "Observe a fotografia e relacione os elementos reais da cena ao conteúdo: Biomas brasileiros.",
+    "zoom": true,
+    "aula": "Vegetação - Aula 2: Biomas brasileiros",
+    "secao": "Comece observando",
+    "source_url": "https://commons.wikimedia.org/wiki/File:CAATINGA_bioma_brasileiro.jpg",
+    "commons_title": "CAATINGA bioma brasileiro.jpg"
+  }
+}
