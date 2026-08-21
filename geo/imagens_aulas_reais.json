@@ -1,0 +1,443 @@
+{
+  "relevo_formas_planalto_planicie_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/relevo_formas_planalto_planicie_01.jpg",
+    "alt": "Paisagem comparando planalto, planície, montanha e depressão em diferentes altitudes.",
+    "fonte": "Wikimedia Commons; arquivo File:Central Brazil Cerrado (Landsat 9, 2025-05-19).jpg; NASA/Wanmei Liang; Landsat data: USGS; Public domain.",
+    "observacao": "Compare a altura, a inclinação e a posição das formas para diferenciar planaltos, planícies, montanhas e depressões.",
+    "zoom": true,
+    "externa": false,
+    "query": "Brazil plateau landscape"
+  },
+  "relevo_formas_perfil_topografico_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/relevo_formas_perfil_topografico_01.png",
+    "alt": "Perfil topográfico com variação de altitude entre montanha, planalto, vale e planície.",
+    "fonte": "Wikimedia Commons; arquivo File:Map of Taiwan and the Pescadores Islands WDL208.png; Li, Liankun， 19th century; Public domain.",
+    "observacao": "O perfil transforma a paisagem em corte lateral, facilitando a leitura de altitude e declividade.",
+    "zoom": true,
+    "externa": false,
+    "query": "Relevo Formas do relevo geography photograph"
+  },
+  "relevo_agentes_internos_placas_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/relevo_agentes_internos_placas_01.png",
+    "alt": "Esquema de placas tectônicas convergentes formando dobramentos e áreas montanhosas.",
+    "fonte": "Wikimedia Commons; arquivo File:Tectonic plates.png; Map:USGS\nDescription:Muriel Gottrop~commonswiki; Public domain.",
+    "observacao": "Movimentos internos da Terra ajudam a explicar cadeias de montanhas, vulcões e terremotos.",
+    "zoom": true,
+    "externa": false,
+    "query": "tectonic plates map"
+  },
+  "relevo_agentes_internos_vulcanismo_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/relevo_agentes_internos_vulcanismo_01.jpg",
+    "alt": "Corte de vulcão com magma, cone vulcânico e área de instabilidade tectônica.",
+    "fonte": "Wikimedia Commons; arquivo File:View from Volcano Pacaya, Guatemala.jpg; Christopher Crouzet; CC BY-SA 4.0.",
+    "observacao": "O vulcanismo mostra que parte do relevo é construída por forças internas do planeta.",
+    "zoom": true,
+    "externa": false,
+    "query": "volcano eruption landscape"
+  },
+  "relevo_agentes_externos_erosao_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/relevo_agentes_externos_erosao_01.jpg",
+    "alt": "Encosta com ravinas e transporte de sedimentos pela água da chuva.",
+    "fonte": "Wikimedia Commons; arquivo File:Gully erosion in Nsukka.jpg; Pilnka; CC BY-SA 4.0.",
+    "observacao": "A erosão remove solo e rocha, transportando materiais para áreas mais baixas.",
+    "zoom": true,
+    "externa": false,
+    "query": "soil erosion gully photograph"
+  },
+  "relevo_agentes_externos_sedimentacao_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/relevo_agentes_externos_sedimentacao_01.jpg",
+    "alt": "Rio depositando sedimentos em área baixa após desgaste de encostas.",
+    "fonte": "Wikimedia Commons; arquivo File:Building Up the Yellow River Delta.jpeg; NASA Earth Observatory images by Lauren Dauphin, using Landsat data from the U.S. Geological Survey. Story by Adam Voiland.; Public domain.",
+    "observacao": "Transporte e sedimentação completam o processo iniciado pelo intemperismo e pela erosão.",
+    "zoom": true,
+    "externa": false,
+    "query": "river sediment delta photograph"
+  },
+  "relevo_brasileiro_planalto_planicie_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/relevo_brasileiro_planalto_planicie_01.jpg",
+    "alt": "Comparação visual entre planalto central e planície amazônica.",
+    "fonte": "Wikimedia Commons; arquivo File:Crimea, Ai-Petri, low clouds.jpg; Dmytro Balkhovitin; CC BY-SA 4.0.",
+    "observacao": "Comparar duas formas brasileiras ajuda a relacionar altitude, rios, erosão e sedimentação.",
+    "zoom": true,
+    "externa": false,
+    "query": "Brazil plateau landscape"
+  },
+  "relevo_sociedade_estradas_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/relevo_sociedade_estradas_01.jpg",
+    "alt": "Estrada sinuosa atravessando serra e vale.",
+    "fonte": "Wikimedia Commons; arquivo File:Stamp of Brazil - 1959 - Colnect 264399 - 11º Congress Roads.jpeg; Post of Brazil; Public domain.",
+    "observacao": "Estradas em áreas inclinadas exigem cortes, túneis, contenção e planejamento.",
+    "zoom": true,
+    "externa": false,
+    "query": "mountain road Brazil"
+  },
+  "relevo_riscos_deslizamento_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/relevo_riscos_deslizamento_01.jpg",
+    "alt": "Encosta com solo exposto, chuva forte e seta indicando risco de deslizamento.",
+    "fonte": "Wikimedia Commons; arquivo File:Deadly landslides in Petropolis, Brazil (Copernicus).jpg; European Union, Copernicus Sentinel-2 imagery; Attribution.",
+    "observacao": "Deslizamentos combinam declividade, chuva, solo, vegetação e ocupação humana.",
+    "zoom": true,
+    "externa": false,
+    "query": "landslide Brazil photograph"
+  },
+  "relevo_riscos_enchente_vale_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/relevo_riscos_enchente_vale_01.jpg",
+    "alt": "Vale urbano com rio cheio ocupando a planície de inundação.",
+    "fonte": "Wikimedia Commons; arquivo File:Disastrous floods in Brazil.jpg; European Union, Copernicus Sentinel-2 imagery; Attribution.",
+    "observacao": "Áreas baixas próximas a rios podem inundar, sobretudo quando a cidade impermeabiliza o solo.",
+    "zoom": true,
+    "externa": false,
+    "query": "urban flood Brazil photograph"
+  },
+  "clima_tempo_clima_previsao_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/clima_tempo_clima_previsao_01.jpg",
+    "alt": "Comparação entre previsão do tempo de um dia e gráfico climático de vários anos.",
+    "fonte": "Wikimedia Commons; arquivo File:2015-06-23 20 36 14 Thunderstorm clouds near sunset at the National Weather Service's Baltimore-Washington Weather Forecast Office in Sterling, Virginia.jpg; Famartin; CC BY-SA 4.0.",
+    "observacao": "Tempo descreve o momento; clima depende de padrões observados durante longo período.",
+    "zoom": true,
+    "externa": false,
+    "query": "weather forecast thunderstorm clouds photograph"
+  },
+  "clima_elementos_estacao_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/clima_elementos_estacao_01.jpg",
+    "alt": "Estação meteorológica com termômetro, pluviômetro, barômetro e anemômetro.",
+    "fonte": "Wikimedia Commons; arquivo File:Weather station instruments in City Botanic Gardens, Brisbane, Queensland, 2020.jpg; Kgbo; CC BY-SA 4.0.",
+    "observacao": "Os elementos do clima são medidos por instrumentos para comparar lugares e períodos.",
+    "zoom": true,
+    "externa": false,
+    "query": "weather station instruments photograph"
+  },
+  "clima_elementos_precipitacao_vento_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/clima_elementos_precipitacao_vento_01.jpg",
+    "alt": "Nuvens, chuva e vento representando precipitação, umidade e circulação do ar.",
+    "fonte": "Wikimedia Commons; arquivo File:Rain on the valley (52353730098).jpg; Joshua Tree National Park; Public domain.",
+    "observacao": "Temperatura, umidade, pressão, ventos e precipitação atuam juntos na atmosfera.",
+    "zoom": true,
+    "externa": false,
+    "query": "rain clouds precipitation photograph"
+  },
+  "clima_fatores_latitude_altitude_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/clima_fatores_latitude_altitude_01.jpg",
+    "alt": "Globo com faixas de latitude e montanha indicando efeito da altitude.",
+    "fonte": "Wikimedia Commons; arquivo File:Equator Line Monument, Macapá city, Brazil.jpg; Jorge Andrade from Rio de Janeiro, Brazil; CC BY 2.0.",
+    "observacao": "Latitude e altitude ajudam a explicar diferenças de temperatura entre lugares.",
+    "zoom": true,
+    "externa": false,
+    "query": "equator monument Macapa Brazil"
+  },
+  "clima_frente_fria_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/clima_frente_fria_01.jpg",
+    "alt": "Frente fria avançando sobre área urbana com nuvens e queda de temperatura.",
+    "fonte": "Wikimedia Commons; arquivo File:Smog with Cold front in the Yellow Sea.jpg; NASA, MODIS Rapid Response System; Public domain.",
+    "observacao": "Frentes mostram o encontro de massas de ar com características diferentes.",
+    "zoom": true,
+    "externa": false,
+    "query": "cold front satellite image South America"
+  },
+  "clima_brasileiros_climograma_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/clima_brasileiros_climograma_01.png",
+    "alt": "Climograma comparando chuva e temperatura ao longo do ano.",
+    "fonte": "Wikimedia Commons; arquivo File:Ipcc 2014 bar graph.png; Tetizeraz; CC0.",
+    "observacao": "Climogramas ajudam a reconhecer estação seca, período chuvoso e variação térmica.",
+    "zoom": true,
+    "externa": false,
+    "query": "climate graph Brazil"
+  },
+  "clima_mudancas_ilha_calor_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/clima_mudancas_ilha_calor_01.jpg",
+    "alt": "Área urbana com superfície aquecida e poucas áreas verdes.",
+    "fonte": "Wikimedia Commons; arquivo File:Running Through Paris Heat (153178 - oli2 20240607 lrg).jpg; NASA Earth Observatory images by Wanmei Liang and Michala Garrison, using VIIRS Land Surface Temperature data, marathon route from Github, and Landsat data from the U.S. Geological Survey. Story by Adam Voiland.; Public domain.",
+    "observacao": "Cidades podem ampliar o calor local, afetando saúde, energia e conforto térmico.",
+    "zoom": true,
+    "externa": false,
+    "query": "urban heat island city photograph"
+  },
+  "clima_cotidiano_agricultura_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/clima_cotidiano_agricultura_01.jpg",
+    "alt": "Plantação dependente de chuva regular e reservatório de água.",
+    "fonte": "Wikimedia Commons; arquivo File:A farm reservoir used to irrigate crops in a drought - geograph.org.uk - 4073081.jpg; Dr Duncan Pepper; CC BY-SA 2.0.",
+    "observacao": "O clima interfere na agricultura, no abastecimento e no preço dos alimentos.",
+    "zoom": true,
+    "externa": false,
+    "query": "drought agriculture reservoir photograph"
+  },
+  "vegetacao_estratos_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/vegetacao_estratos_01.jpg",
+    "alt": "Esquema de estratos vegetais com árvores altas, arbustos e herbáceas.",
+    "fonte": "Wikimedia Commons; arquivo File:Khao Sok primary tropical rainforest, southern Thailand.jpg; Vyacheslav Argenberg; CC BY 4.0.",
+    "observacao": "Observar altura, densidade e espaçamento ajuda a diferenciar formações vegetais.",
+    "zoom": true,
+    "externa": false,
+    "query": "rainforest canopy layers photograph"
+  },
+  "vegetacao_biomas_brasil_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/vegetacao_biomas_brasil_01.jpg",
+    "alt": "Mapa esquemático do Brasil com Amazônia, Cerrado, Caatinga, Mata Atlântica, Pantanal e Pampa.",
+    "fonte": "Wikimedia Commons; arquivo File:Brazil veg 1977.jpg; Wikimedia Commons; Public domain.",
+    "observacao": "Os biomas brasileiros ocupam regiões diferentes e possuem adaptações próprias.",
+    "zoom": true,
+    "externa": false,
+    "query": "Brazil biomes map"
+  },
+  "vegetacao_biomas_comparacao_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/vegetacao_biomas_comparacao_01.png",
+    "alt": "Comparação entre floresta densa, Cerrado, Caatinga, Pantanal e Pampa.",
+    "fonte": "Wikimedia Commons; arquivo File:Biomes of Brazil.png; Brazil Travel; CC BY-SA 4.0.",
+    "observacao": "A variedade visual evita confundir todos os biomas com uma única paisagem verde.",
+    "zoom": true,
+    "externa": false,
+    "query": "Brazil biomes map"
+  },
+  "vegetacao_clima_caatinga_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/vegetacao_clima_caatinga_01.jpg",
+    "alt": "Caatinga com plantas espaçadas e adaptadas à seca.",
+    "fonte": "Wikimedia Commons; arquivo File:Chapada Diamantina Raphael Coelho (03).jpg; @raphaelcoelhophoto; CC BY-SA 4.0.",
+    "observacao": "A Caatinga mostra como a vegetação responde à irregularidade das chuvas.",
+    "zoom": true,
+    "externa": false,
+    "query": "Caatinga Brazil vegetation photograph"
+  },
+  "vegetacao_impactos_desmatamento_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/vegetacao_impactos_desmatamento_01.jpg",
+    "alt": "Área de floresta fragmentada por desmatamento e avanço da ocupação humana.",
+    "fonte": "Wikimedia Commons; arquivo File:DeforestationinBrazil2.jpg; Imagery from LANCE FIRMS operated by NASA's Earth Science Data and Information System (ESDIS) with funding provided by NASA Headquarters.; Public domain.",
+    "observacao": "Desmatamento e queimadas reduzem biodiversidade e alteram solo, água e clima local.",
+    "zoom": true,
+    "externa": false,
+    "query": "deforestation Brazil aerial photograph"
+  },
+  "hidrografia_aquifero_nascente_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/hidrografia_aquifero_nascente_01.jpg",
+    "alt": "Corte do solo mostrando aquífero alimentando uma nascente.",
+    "fonte": "Wikimedia Commons; arquivo File:Reserva Biológica Estadual do Aguaí VICTOR J. ZOMER (06).jpg; Victor J. Zomer; CC BY-SA 4.0.",
+    "observacao": "Aquíferos armazenam água no subsolo e podem alimentar rios e nascentes.",
+    "zoom": true,
+    "externa": false,
+    "query": "Guarani aquifer map"
+  },
+  "hidrografia_bacia_rede_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/hidrografia_bacia_rede_01.jpg",
+    "alt": "Rede de drenagem com rio principal, afluentes, divisor de águas e foz.",
+    "fonte": "Wikimedia Commons; arquivo File:Brazil Goiás waterbasin map.jpg; Uwe Dedering; CC BY-SA 3.0.",
+    "observacao": "Bacia hidrográfica é a área drenada por rios conectados.",
+    "zoom": true,
+    "externa": false,
+    "query": "Brazil hydrographic basin map"
+  },
+  "hidrografia_bacia_mapa_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/hidrografia_bacia_mapa_01.jpg",
+    "alt": "Mapa esquemático de bacia hidrográfica com limites e afluentes.",
+    "fonte": "Wikimedia Commons; arquivo File:Patos Lagoon Basin.jpg; LOPES (2017); CDC; LabGeo UFRGS. Geodetic System: WGS84; CC BY-SA 4.0.",
+    "observacao": "O mapa mostra que limites de bacia seguem o relevo, não necessariamente fronteiras políticas.",
+    "zoom": true,
+    "externa": false,
+    "query": "Brazil hydrographic basin map"
+  },
+  "hidrografia_hidreletrica_irrigacao_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/hidrografia_hidreletrica_irrigacao_01.jpg",
+    "alt": "Barragem com reservatório, turbinas e canal de irrigação.",
+    "fonte": "Wikimedia Commons; arquivo File:Usina Hidroelétrica Itaipu Binacional - Itaipu Dam - Foto aérea da usina com o vertedouro aberto - Aerial photo of the powerplant with the spillway gates opened (17359345042).jpg; Deni Williams from São Paulo, Brasil; CC BY 2.0.",
+    "observacao": "Represas ampliam usos da água, mas também transformam rios e paisagens.",
+    "zoom": true,
+    "externa": false,
+    "query": "Itaipu dam aerial photograph"
+  },
+  "hidrografia_problemas_escassez_enchente_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/hidrografia_problemas_escassez_enchente_01.jpg",
+    "alt": "Comparação entre reservatório baixo e área urbana inundada.",
+    "fonte": "Wikimedia Commons; arquivo File:Inundação em Vitória de Santo Antão (4).jpg; Luiz79; CC BY 3.0 br.",
+    "observacao": "Problemas hídricos incluem falta de água e excesso de água em áreas vulneráveis.",
+    "zoom": true,
+    "externa": false,
+    "query": "urban flood Brazil photograph"
+  },
+  "populacao_conceitos_densidade_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/populacao_conceitos_densidade_01.jpg",
+    "alt": "Mapa com áreas de alta e baixa densidade demográfica.",
+    "fonte": "Wikimedia Commons; arquivo File:Brazil Population Density, 2000 (5457010921).jpg; SEDACMaps; CC BY 2.0.",
+    "observacao": "Densidade demográfica mostra habitantes por área, diferente de população total.",
+    "zoom": true,
+    "externa": false,
+    "query": "Brazil population density map"
+  },
+  "populacao_estrutura_piramide_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/populacao_estrutura_piramide_01.png",
+    "alt": "Pirâmide etária com base, adultos e idosos destacados.",
+    "fonte": "Wikimedia Commons; arquivo File:Brazil single age population pyramid 2020.png; Sdgedfegw; CC BY-SA 4.0.",
+    "observacao": "Pirâmides etárias mostram idade, sexo e sinais de envelhecimento populacional.",
+    "zoom": true,
+    "externa": false,
+    "query": "Brazil population pyramid"
+  },
+  "populacao_estrutura_envelhecimento_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/populacao_estrutura_envelhecimento_01.jpg",
+    "alt": "Comparação entre população jovem e população envelhecida.",
+    "fonte": "Wikimedia Commons; arquivo File:Global cases of site-specific osteoarthritis forecasted to the year 2050 and relative contribution by region, 2020–50.jpg; Authors of the study: GBD 2021 Osteoarthritis Collaborators; CC BY 4.0.",
+    "observacao": "A forma da pirâmide indica demandas por escolas, trabalho, saúde e previdência.",
+    "zoom": true,
+    "externa": false,
+    "query": "population ageing chart"
+  },
+  "populacao_distribuicao_litoral_interior_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/populacao_distribuicao_litoral_interior_01.jpg",
+    "alt": "Mapa esquemático do Brasil com maior concentração populacional no litoral.",
+    "fonte": "Wikimedia Commons; arquivo File:Suppression-of-a-Field-Population-of-Aedes-aegypti-in-Brazil-by-Sustained-Release-of-Transgenic-pntd.0003864.g001.jpg; Carvalho D, McKemey A, Garziera L, Lacroix R, Donnelly C, Alphey L, Malavasi A, Capurro M; CC BY 4.0.",
+    "observacao": "A distribuição da população brasileira é desigual e historicamente concentrada em certas regiões.",
+    "zoom": true,
+    "externa": false,
+    "query": "Brazil population distribution map"
+  },
+  "populacao_distribuicao_rural_urbano_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/populacao_distribuicao_rural_urbano_01.jpg",
+    "alt": "Comparação entre área rural dispersa e área urbana concentrada.",
+    "fonte": "Wikimedia Commons; arquivo File:Landscape on top of a mountain range in the rural area of Ariquemes, Rondônia, Brazil.jpg; Cogox; CC BY-SA 4.0.",
+    "observacao": "Fatores históricos, econômicos e naturais influenciam onde as pessoas vivem.",
+    "zoom": true,
+    "externa": false,
+    "query": "rural Brazil landscape photograph"
+  },
+  "populacao_indicadores_idh_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/populacao_indicadores_idh_01.png",
+    "alt": "Painel de indicadores sociais com renda, escolaridade, saúde e saneamento.",
+    "fonte": "Wikimedia Commons; arquivo File:Human Development Index of Southern Cone Subregions..png; Aztronomo; CC BY-SA 4.0.",
+    "observacao": "Indicadores sociais ajudam a comparar condições de vida entre lugares.",
+    "zoom": true,
+    "externa": false,
+    "query": "human development index map Brazil"
+  },
+  "migracoes_tipos_fluxos_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/migracoes_tipos_fluxos_01.jpg",
+    "alt": "Setas mostrando migração interna, externa, temporária e definitiva.",
+    "fonte": "Wikimedia Commons; arquivo File:Pāhoehoe Lava flow.JPG; Brocken Inaglory; CC BY-SA 3.0.",
+    "observacao": "Tipos de migração dependem de origem, destino, duração e permanência.",
+    "zoom": true,
+    "externa": false,
+    "query": "migration flows map"
+  },
+  "migracoes_tipos_fronteira_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/migracoes_tipos_fronteira_01.png",
+    "alt": "Pessoas atravessando limite entre regiões e países em mapa esquemático.",
+    "fonte": "Wikimedia Commons; arquivo File:Map of ISEA and generalized migration patterns.png; Tatum S. Simonson, Jinchuan Xing, Robert Barrett, Edward Jerah, Peter Loa, Yuhua Zhang, W. Scott Watkins, David J. Witherspoon, Chad D. Huff, Scott Woodward, Bryan Mowry, Lynn B. Jorde; CC BY 2.5.",
+    "observacao": "A fronteira ajuda a diferenciar migração interna de migração internacional.",
+    "zoom": true,
+    "externa": false,
+    "query": "migration flows map"
+  },
+  "migracoes_causas_emprego_estudo_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/migracoes_causas_emprego_estudo_01.jpg",
+    "alt": "Fluxos migratórios motivados por emprego, estudo, família e clima.",
+    "fonte": "Wikimedia Commons; arquivo File:1704 Gemelli Map of the Aztec Migration from Aztlan to Chapultapec - Geographicus - AztecMigration-gemelli-1704.jpg; http://www.geographicus.com/mm5/cartographers/gemelli.txt; Public domain.",
+    "observacao": "Causas migratórias podem ser econômicas, sociais, ambientais ou políticas.",
+    "zoom": true,
+    "externa": false,
+    "query": "migration flows map"
+  },
+  "urbanizacao_conceito_expansao_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/urbanizacao_conceito_expansao_01.png",
+    "alt": "Mancha urbana crescendo ao redor de um centro inicial.",
+    "fonte": "Wikimedia Commons; arquivo File:Valletta and the urban mosaic of eastern Malta (Copernicus 2026-02-15).png; European Union, Copernicus Sentinel-2 imagery; Attribution.",
+    "observacao": "Urbanização envolve crescimento da população urbana e expansão da área construída.",
+    "zoom": true,
+    "externa": false,
+    "query": "urban expansion satellite photograph"
+  },
+  "urbanizacao_conceito_servicos_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/urbanizacao_conceito_servicos_01.png",
+    "alt": "Cidade com moradias, comércio, escola, hospital e transporte.",
+    "fonte": "Wikimedia Commons; arquivo File:Valletta and the urban mosaic of eastern Malta (Copernicus 2026-02-15).webp; European Union, Copernicus Sentinel-2 imagery; Attribution.",
+    "observacao": "A cidade concentra serviços, empregos e fluxos que atraem população.",
+    "zoom": true,
+    "externa": false,
+    "query": "urban expansion satellite photograph"
+  },
+  "urbanizacao_rede_hierarquia_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/urbanizacao_rede_hierarquia_01.png",
+    "alt": "Rede urbana com metrópole, cidade média e centros locais conectados.",
+    "fonte": "Wikimedia Commons; arquivo File:Belém hosts COP30 (Copernicus 2025-08-12).webp; European Union, Copernicus Sentinel-2 imagery; Attribution.",
+    "observacao": "Cidades exercem diferentes níveis de influência sobre serviços e deslocamentos.",
+    "zoom": true,
+    "externa": false,
+    "query": "urban expansion satellite photograph"
+  },
+  "urbanizacao_rede_fluxos_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/urbanizacao_rede_fluxos_01.png",
+    "alt": "Setas de pessoas, mercadorias e informações ligando cidades.",
+    "fonte": "Wikimedia Commons; arquivo File:Belém hosts COP30 (Copernicus 2025-11-10).png; European Union, Copernicus Sentinel-2 imagery; Attribution.",
+    "observacao": "A rede urbana aparece nos fluxos diários e regionais entre centros urbanos.",
+    "zoom": true,
+    "externa": false,
+    "query": "urban expansion satellite photograph"
+  },
+  "urbanizacao_metropolizacao_conurbacao_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/urbanizacao_metropolizacao_conurbacao_01.png",
+    "alt": "Duas manchas urbanas conectadas formando região metropolitana.",
+    "fonte": "Wikimedia Commons; arquivo File:Strasbourg and the Rhine corridor, France (Copernicus 2026-04-17).png; European Union, Copernicus Sentinel-2 imagery; Attribution.",
+    "observacao": "Metropolização inclui conurbação, concentração de serviços e fluxos pendulares.",
+    "zoom": true,
+    "externa": false,
+    "query": "urban expansion satellite photograph"
+  },
+  "urbanizacao_metropolizacao_verticalizacao_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/urbanizacao_metropolizacao_verticalizacao_01.png",
+    "alt": "Centro metropolitano com edifícios altos e bairros ao redor.",
+    "fonte": "Wikimedia Commons; arquivo File:Strasbourg and the Rhine corridor, France (Copernicus 2026-04-17).webp; European Union, Copernicus Sentinel-2 imagery; Attribution.",
+    "observacao": "Verticalização e densidade são marcas visíveis de muitas metrópoles.",
+    "zoom": true,
+    "externa": false,
+    "query": "urban expansion satellite photograph"
+  },
+  "urbanizacao_problemas_enchentes_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/urbanizacao_problemas_enchentes_01.jpg",
+    "alt": "Rua alagada por chuva em área impermeabilizada.",
+    "fonte": "Wikimedia Commons; arquivo File:Inundação em Vitória de Santo Antão (3).jpg; Luiz79; CC BY 3.0 br.",
+    "observacao": "Enchentes urbanas se relacionam com drenagem, rios canalizados e ocupação de várzeas.",
+    "zoom": true,
+    "externa": false,
+    "query": "urban flood Brazil photograph"
+  },
+  "urbanizacao_planejamento_mobilidade_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/urbanizacao_planejamento_mobilidade_01.png",
+    "alt": "Corredor de ônibus, ciclovia e calçadas em avenida planejada.",
+    "fonte": "Wikimedia Commons; arquivo File:Valdivia, Chile (Copernicus 2025-12-24).webp; European Union, Copernicus Sentinel-2 imagery; Attribution.",
+    "observacao": "Planejamento urbano organiza mobilidade, habitação, áreas verdes e serviços.",
+    "zoom": true,
+    "externa": false,
+    "query": "urban expansion satellite photograph"
+  },
+  "urbanizacao_planejamento_zoneamento_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/urbanizacao_planejamento_zoneamento_01.png",
+    "alt": "Mapa de zoneamento com áreas residenciais, comerciais, verdes e transporte.",
+    "fonte": "Wikimedia Commons; arquivo File:São Paulo as seen from space (Copernicus 2026-01-03).png; European Union, Copernicus Sentinel-2 imagery; Attribution.",
+    "observacao": "Mapas urbanos ajudam a decidir usos do solo e reduzir conflitos de circulação.",
+    "zoom": true,
+    "externa": false,
+    "query": "urban expansion satellite photograph"
+  },
+  "urbanizacao_sustentavel_areas_verdes_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/urbanizacao_sustentavel_areas_verdes_01.png",
+    "alt": "Parque urbano integrado a transporte coletivo e moradias.",
+    "fonte": "Wikimedia Commons; arquivo File:São Paulo as seen from space (Copernicus 2026-01-03).webp; European Union, Copernicus Sentinel-2 imagery; Attribution.",
+    "observacao": "Cidades sustentáveis combinam áreas verdes, mobilidade e acesso a serviços.",
+    "zoom": true,
+    "externa": false,
+    "query": "urban expansion satellite photograph"
+  },
+  "urbanizacao_sustentavel_drenagem_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/urbanizacao_sustentavel_drenagem_01.png",
+    "alt": "Rua com jardins de chuva, árvores e pavimento permeável.",
+    "fonte": "Wikimedia Commons; arquivo File:Monaco’s urbanised coast between the Maritime Alps and the sea (Copernicus 2026-04-26).png; European Union, Copernicus Sentinel-2 imagery; Attribution.",
+    "observacao": "Soluções sustentáveis reduzem calor, enchentes e desigualdades ambientais.",
+    "zoom": true,
+    "externa": false,
+    "query": "urban expansion satellite photograph"
+  },
+  "globalizacao_conceito_produto_01.svg": {
+    "arquivo": "geo/imagens/aulas_reais/globalizacao_conceito_produto_01.jpg",
+    "alt": "Produto montado com peças vindas de diferentes países.",
+    "fonte": "Wikimedia Commons; arquivo File:Aerial view of Manila Port's International Container terminal.jpg; Patrick Roque; CC BY-SA 3.0.",
+    "observacao": "Um produto global pode reunir matéria-prima, tecnologia, trabalho e mercado em vários países.",
+    "zoom": true,
+    "externa": false,
+    "query": "container port international trade photograph"
+  }
+}

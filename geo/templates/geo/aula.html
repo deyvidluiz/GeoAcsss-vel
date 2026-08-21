@@ -32,7 +32,7 @@
             </div>
             {% if aula.imagem %}
                 <div class="col-12 col-lg-6">
-                    <img class="img-fluid imagem-aula imagem-hero" src="{% if aula.imagem_externa %}{{ aula.imagem }}{% else %}{% static aula.imagem %}{% endif %}" alt="{{ aula.imagem_alt }}">
+                    <img class="img-fluid imagem-aula imagem-hero" src="{% if aula.imagem_externa %}{{ aula.imagem }}{% else %}{% static aula.imagem %}{% endif %}" alt="{{ aula.imagem_alt }}"{% if aula.imagem_fallback %} onerror="this.onerror=null; this.src='{% static aula.imagem_fallback %}';"{% endif %}>
                     {% if aula.imagem_observacao %}
                         <p class="observacao-imagem">{{ aula.imagem_observacao }}</p>
                     {% endif %}
@@ -74,7 +74,7 @@
                 </div>
                 {% if secao.imagem %}
                     <div class="col-12 col-md-6">
-                        <img class="img-fluid imagem-aula" src="{% if secao.imagem_externa %}{{ secao.imagem }}{% else %}{% static secao.imagem %}{% endif %}" alt="{{ secao.imagem_alt }}">
+                        <img class="img-fluid imagem-aula" src="{% if secao.imagem_externa %}{{ secao.imagem }}{% else %}{% static secao.imagem %}{% endif %}" alt="{{ secao.imagem_alt }}"{% if secao.imagem_fallback %} onerror="this.onerror=null; this.src='{% static secao.imagem_fallback %}';"{% endif %}>
                         {% if secao.imagem_observacao %}
                             <p class="observacao-imagem">{{ secao.imagem_observacao }}</p>
                         {% endif %}
